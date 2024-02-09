@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "rose_bush",
+  "version": "${version}",
+  "name": "Rose Bush",
+  "description": "Aeroshide's custom fabric library for common bindings and backend",
+  "authors": [
+    "Aeroshide"
+  ],
+  "contact": {
+    "repo": "https://github.com/Aeroshide/Rose_Bush"
+  },
+  "license": "Apache-2.0",
+  "icon": "assets/rose_bush/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.aeroshide.rose_bush.RoseBushClient"
+    ],
+    "main": [
+      "com.aeroshide.rose_bush.RoseBush"
+    ]
+  },
+  "mixins": [
+    "rose_bush.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": ">=1.14"
+  }
+}
