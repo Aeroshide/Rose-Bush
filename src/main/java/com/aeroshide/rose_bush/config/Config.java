@@ -9,18 +9,18 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Config {
-    private static Config instance;
+    private Config instance;
     private Map<String, Object> data;
     private File config;
 
-    private Config(String configFileName) {
-        this.config = new File(configFileName);
+    private Config(String configPath) {
+        this.config = new File(configPath);
         loadConfig();
     }
 
-    public static Config getInstance(String configFileName) {
+    public Config getInstance(String configPath) {
         if (instance == null) {
-            instance = new Config(configFileName);
+            instance = new Config(configPath);
         }
         return instance;
     }
