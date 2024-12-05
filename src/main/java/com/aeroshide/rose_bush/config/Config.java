@@ -11,18 +11,11 @@ import java.util.Map;
 public class Config {
     private static Config instance;
     private Map<String, Object> data;
-    private File config;
+    private final File config;
 
-    private Config(String configFileName) {
+    public Config(String configFileName) {
         this.config = new File(configFileName);
         loadConfig();
-    }
-
-    public static Config getInstance(String configFileName) {
-        if (instance == null) {
-            instance = new Config(configFileName);
-        }
-        return instance;
     }
 
     public Object getOption(String key) {
